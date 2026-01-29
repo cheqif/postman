@@ -13,8 +13,8 @@ rootDirectory = postmanapi
 [config.relations.collections.metaData]
 
 [config.relations.apiDefinition]
-files[] = {"path":"openai.yaml","metaData":{}}
+files[] = {"path":"/postmanapiopenai.yaml","metaData":{}}
 
 [config.relations.apiDefinition.metaData]
 type = openapi:3
-rootFiles[] = openai.yaml
+rootFiles[] = postmanapi/openai.yaml
