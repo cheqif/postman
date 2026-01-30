@@ -9,6 +9,7 @@ id = b50d6879-26dd-4127-be3e-0fbe2382d3a2
 
 [config.relations.collections]
 rootDirectory = postmanapi
+files[] = {"id":"51920151-bd670e5b-b851-4551-a12d-13cf3b3eef90","path":"ReqRes_collection.json","metaData":{"generateCollectionPreferences":"{\"requestNameSource\":\"Fallback\",\"indentCharacter\":\"Space\",\"parametersResolution\":\"Example\",\"folderStrategy\":\"Paths\",\"nestedFolderHierarchy\":false,\"includeAuthInfoInExample\":true,\"enableOptionalParameters\":true,\"keepImplicitHeaders\":false,\"includeDeprecated\":true,\"alwaysInheritAuthentication\":false,\"updateCollectionSync\":true,\"requestParametersResolution\":\"Example\",\"exampleParametersResolution\":\"Example\"}"}}
 
 [config.relations.collections.metaData]
 

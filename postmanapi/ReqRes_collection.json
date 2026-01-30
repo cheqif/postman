@@ -1,0 +1,297 @@
+{
+	"info": {
+		"_postman_id": "bd670e5b-b851-4551-a12d-13cf3b3eef90",
+		"name": "ReqRes_collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "51920151-bd670e5b-b851-4551-a12d-13cf3b3eef90"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "register",
+					"item": [
+						{
+							"name": "用户注册 (鉴权)",
+							"id": "2ce03fb6-5ed2-458f-a9f3-c4f11e7a1abf",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"eve.holt@reqres.in\",\n  \"password\": \"pistol\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"register"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "cdb7e128-b8d0-478d-955d-085adfe82607",
+									"name": "注册成功",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"email\": \"eve.holt@reqres.in\",\n  \"password\": \"pistol\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/register",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"register"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 4,\n  \"token\": \"QpwL5tke4Pnpja7X4\"\n}"
+								}
+							]
+						}
+					],
+					"id": "fb85dd1a-5308-43ba-8ef1-74abf1e5f18b"
+				},
+				{
+					"name": "users",
+					"item": [
+						{
+							"name": "{userId}",
+							"item": [
+								{
+									"name": "获取用户详情",
+									"id": "40c5aee5-4c2e-4b54-83e6-6cfdc782a3ce",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/users/:userId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users",
+												":userId"
+											],
+											"variable": [
+												{
+													"key": "userId",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"id": "5d150553-4798-417c-bd2a-dd5d7706b6a0",
+											"name": "获取成功",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "application/json"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/users/:userId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"users",
+														":userId"
+													],
+													"variable": [
+														{
+															"key": "userId",
+															"value": "2"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"data\": {\n    \"id\": 2,\n    \"email\": \"janet.weaver@reqres.in\",\n    \"first_name\": \"Janet\"\n  }\n}"
+										}
+									]
+								}
+							],
+							"id": "234c6be1-7a23-4ec8-a94e-99c36f532d22"
+						},
+						{
+							"name": "创建新用户",
+							"id": "cb627b15-83f2-4b29-adad-f536d3ff275b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"Gemini\",\n  \"job\": \"DevOps\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/users",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "115fabe2-5e55-4e38-aa96-268c4b451b71",
+									"name": "创建成功",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"Gemini\",\n  \"job\": \"DevOps\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/users",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"users"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"name\": \"Gemini\",\n  \"job\": \"DevOps\",\n  \"id\": \"999\",\n  \"createdAt\": \"2026-01-28T10:00:00.000Z\"\n}"
+								}
+							]
+						}
+					],
+					"id": "d509f8b8-2f18-47b9-a1cb-13843b2b42bb"
+				}
+			],
+			"id": "760ee949-8362-4caa-ace7-71bad21f1254"
+		}
+	],
+	"variable": [
+		{
+			"id": "d68f96d2-f1cc-4dc0-a80b-9f8d7690b315",
+			"key": "baseUrl",
+			"value": "https://reqres.in"
+		}
+	]
+}
