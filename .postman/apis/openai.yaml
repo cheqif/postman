@@ -1,1 +1,78 @@
-
+openapi: 3.0.0
+info:
+  title: ReqRes User System
+  version: 1.0.0
+servers:
+  - url: https://reqres.in
+    description: Production Server
+paths:
+  /api/register:
+    post:
+      summary: 用户注册 (鉴权)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  example: "eve.holt@reqres.in"
+                password:
+                  type: string
+                  example: "pistol"
+      responses:
+        '200':
+          description: 注册成功
+          content:
+            application/json:
+              example:
+                id: 4
+                token: "QpwL5tke4Pnpja7X4"
+  /api/users:
+    post:
+      summary: 创建新用户
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: "Gemini"
+                job:
+                  type: string
+                  example: "DevOps"
+      responses:
+        '201':
+          description: 创建成功
+          content:
+            application/json:
+              example:
+                name: "Gemini"
+                job: "DevOps"
+                id: "999"
+                createdAt: "2026-01-28T10:00:00.000Z"
+  /api/users/{userId}:
+    get:
+      summary: 获取用户详情
+      parameters:
+        - name: userId
+          in: path
+          required: true
+          schema:
+            type: string
+            example: "2"
+      responses:
+        '200':
+          description: 获取成功
+          content:
+            application/json:
+              example:
+                data:
+                  id: 2
+                  email: "janet.weaver@reqres.in"
+                  first_name: "Janet"
